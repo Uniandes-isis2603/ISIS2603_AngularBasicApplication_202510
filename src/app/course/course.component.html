@@ -9,7 +9,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let c of courses">
+        @for (c of courses; track c) {
+<tr>
           <td>
             <dd>{{ c.name }}</dd>
           </td>
@@ -20,6 +21,7 @@
             <dd>{{ c.credits }}</dd>
           </td>
         </tr>
+}
       </tbody>
     </table>
   </div>
